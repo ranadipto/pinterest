@@ -1,0 +1,52 @@
+{% load static %}
+{% static "images" as baseUrl %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+<center>
+    <h1>:UPLOADED IMAGES:</h1>
+</center>
+</head>
+<style>
+  .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+<body>
+    <!-- <div class="container"> -->
+    <!-- {% for img in account_images %}
+    {% if forloop.first %}<div class = "row">{% endif %} -->
+
+    <!-- <div class = "text-center mt-2"> -->
+    <!-- {{img.name}} -->
+    <!-- <div> -->
+    {% for img in account_images %}
+    <img src="{{ img.home_image.url }}" width="20%" height="20%">
+    {% endfor %}
+</div>
+    {{img.name}}
+  
+    <!-- {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class = row>{% endif %}
+        {% if forloop.last %}</div>{% endif %}
+    
+    {% endfor %} -->
+  
+</body>
+</html>
